@@ -16,7 +16,7 @@ If both shells serve the same purpose why are reverse shells generally considere
 The code will utilize two standard library python modules, socket and subprocess. The attackers server will wait on a specific port for the reverse shell to connect back. Once a connection is initiated, the attacker sends a string to the reverse shell which will then take that string and execute it as a system command before returning the output. The best part is that it is FUD(Fully undetectable) as this is coded in a interpreted language. However you CAN compile the script into a windows executable using pyinstaller so it can run without the interpreter.
 
 
-Compiling to a windows executable
+## Compiling to a windows executable
 
 Since python scripts can’t run without the interpreter, you need to use a tool called pyinstaller ,which is NOT included with the default python installation, to convert the script into a windows executable. We are going to save the client code as client.py. Open a local system shell and type in :
 
@@ -24,7 +24,7 @@ Since python scripts can’t run without the interpreter, you need to use a tool
 
 This created a packed python executable that runs without a visible GUI window so the user is not alerted to anything suspicious.
 
-Conclusion
+## Conclusion
 
 This is not all that the reverse shell can do. The one we coded is extremely basic. However you can code more and more complex reverse shells. I have created reverse shells that have even more functionality such as file transfer, keylogging and screenshotting. This is not all that you are limited to. If you want to see examples of much more complex reverse shells you can visit my Github Repo :
 
